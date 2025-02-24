@@ -1,0 +1,124 @@
+/* Modal Overlay */
+.rsm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow-y: auto; /* Enable scrolling if the modal is too tall */
+    padding: 20px; /* Add padding to ensure the modal doesn't touch the edges */
+  }
+  
+  /* Modal Content */
+  .rsm-modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Limit modal width */
+    position: relative;
+    max-height: 90vh; /* Limit modal height to 90% of the viewport height */
+    overflow-y: auto; /* Enable scrolling inside the modal if content overflows */
+    margin-top: 50px; /* Move the modal slightly lower */
+  }
+  
+  /* Close Button - Positioned at the top-left corner */
+  .rsm-close-button {
+    position: absolute;
+    top: 25px;
+    left: 200px; /* Move to the top-left corner */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  .rsm-close-button:hover {
+    color: #934d4d; /* Red color on hover */
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form groups */
+  }
+  
+  /* Form Group */
+  .rsm-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between label and input */
+  }
+  
+  .rsm-form-group label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .rsm-form-group input,
+  .rsm-form-group select,
+  .rsm-form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%; /* Full width */
+  }
+  
+  .rsm-form-group input:focus,
+  .rsm-form-group select:focus,
+  .rsm-form-group textarea:focus {
+    border-color: #13cc63; /* Green border on focus */
+    outline: none;
+  }
+  
+  /* Submit Button */
+  .rsm-submit-button {
+    background-color: #13cc63; /* Green background */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add margin to separate from the last input */
+  }
+  
+  .rsm-submit-button:hover {
+    background-color: #10b357; /* Darker green on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .rsm-modal-content {
+      padding: 20px;
+      width: 90%; /* Adjust width for smaller screens */
+      max-height: 80vh; /* Reduce height for smaller screens */
+      margin-top: 30px; /* Adjust margin for smaller screens */
+    }
+  
+    .rsm-form-group label {
+      font-size: 14px;
+    }
+  
+    .rsm-form-group input,
+    .rsm-form-group select,
+    .rsm-form-group textarea {
+      font-size: 12px;
+    }
+  
+    .rsm-submit-button {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }

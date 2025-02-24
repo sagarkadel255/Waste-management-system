@@ -1,0 +1,119 @@
+/* Overlay that dims the background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dim the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it sits on top */
+}
+
+/* Modal container */
+.modal-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Close button positioned in the top-left corner */
+/* Close button positioned in the top-left corner */
+/* Close button positioned in the top-left corner */
+.close-button {
+  position: absolute;
+  top: 0px;
+  left: 360px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000; /* Ensure button is above all other modal content */
+  padding: 0; /* Remove any padding */
+  /* Removes default styling in WebKit browsers (Safari, Chrome) */
+}
+
+/* Remove any focus or active styles */
+.close-button:focus, .close-button:active {
+  outline: none; /* Remove the focus outline */
+  box-shadow: none; /* Remove any shadow from the button */
+  border: none; /* Remove any border when clicked */
+}
+
+/* Remove blue outline and background color on button hover/focus */
+.close-button:focus-visible {
+  outline: none; /* Remove focus-visible outline */
+}
+
+/* Hover state */
+.close-button:hover {
+  color: #ff0000; /* Optional: Change color on hover */
+  background: none; /* Ensure no background */
+}
+
+/* Prevent blue highlight outline from appearing */
+button:focus, .close-button:focus {
+  outline: none !important; /* Force removal of focus outline */
+  box-shadow: none !important; /* Force removal of shadow */
+  background-color: transparent !important; /* Remove background */
+}
+
+/* Specifically target webkit-based browsers like Chrome/Safari */
+.close-button:focus-visible {
+  outline: none;
+}
+
+
+/* Styling for modal form */
+.form-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Input fields and button styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for background image */
+.modal-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}

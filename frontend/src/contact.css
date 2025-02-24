@@ -1,0 +1,126 @@
+/* General Styles for Contact Page */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: #f6f0f0;
+  color: #333;
+}
+
+/* Contact Section */
+.section-contact {
+  background-image: url("../public/images/contact.jpg"); /* ✅ Correct Path */
+  background-size: cover;
+  background-position: center;
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative; /* For overlay */
+  padding: 5rem 9%; /* Consistent padding with other sections */
+}
+
+/* Add a dark overlay to make text more readable */
+.section-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+}
+
+/* Ensure content is above the overlay */
+.section-contact .content {
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Limit content width for better readability */
+}
+
+.section-contact h2 {
+  font-size: 48px; /* Increased font size */
+  text-align: left;
+  color: white;
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.contact-info h3 {
+  font-size: 28px; /* Increased font size */
+  margin-bottom: 10px;
+  text-align: left;
+  color: white;
+}
+
+.contact-info p {
+  font-size: 20px; /* Increased font size */
+  margin-bottom: 15px;
+  text-align: left;
+  color: white;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: #2905f6;
+  font-size: 32px; /* Increased icon size */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #e41414;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .section-contact {
+    padding: 40px 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .section-contact h2 {
+    font-size: 36px; /* Adjusted font size for smaller screens */
+  }
+
+  .contact-info h3 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  .contact-info p {
+    font-size: 18px; /* Adjusted font size for smaller screens */
+  }
+
+  .social-icons a {
+    font-size: 28px; /* Adjusted icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-contact h2 {
+    font-size: 28px; /* Adjusted font size for very small screens */
+  }
+
+  .contact-info h3 {
+    font-size: 20px; /* Adjusted font size for very small screens */
+  }
+
+  .contact-info p {
+    font-size: 16px; /* Adjusted font size for very small screens */
+  }
+
+  .social-icons a {
+    font-size: 24px; /* Adjusted icon size for very small screens */
+  }
+}

@@ -1,0 +1,130 @@
+/* Navbar container adjustments */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Dark box shadow */
+  height: 80px; /* Increased navbar height to accommodate larger logo */
+}
+
+/* Navbar logo adjustments */
+.navbar-logo {
+  height: 80px; /* Increased height by 50px (from 50px to 80px) */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar links and buttons container */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push everything to the right */
+  gap: 40px; /* Increased gap between links and buttons */
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+  text-decoration: none;
+  color: rgba(13, 13, 13, 0.973); /* Text color */
+  font-size: 1.8rem; /* Larger font size */
+  font-weight: 500; /* Medium font weight */
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  border-bottom: 3px solid transparent; /* Transparent border by default */
+}
+
+/* Hover effect for links */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #069f6c; /* Change text color on hover/active */
+  border-bottom: 3px solid #069546; /* Add border bottom on hover/active */
+}
+
+/* Sign In and Sign Up buttons */
+.navbar-buttons {
+  display: flex;
+  gap: 20px; /* Gap between buttons */
+}
+
+/* Button styles */
+.btn-outline-primary,
+.btn-outline-success {
+  font-size: 1.8rem; /* Same font size as nav links */
+  padding: 8px 20px; /* Larger padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-weight: 500; /* Same font weight as nav links */
+  text-decoration: none; /* Remove underline */
+  border: 2px solid transparent; /* Transparent border by default */
+}
+
+.btn-outline-primary {
+  color: #007bff; /* Blue text color */
+  border-color: #007bff; /* Blue border color */
+}
+
+.btn-outline-success {
+  color: #28a745; /* Green text color */
+  border-color: #28a745; /* Green border color */
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: white; /* White text on hover */
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745; /* Green background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Remove default button outline */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 995px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto; /* Allow navbar height to adjust on smaller screens */
+  }
+
+  .navbar-logo {
+    height: 60px; /* Slightly smaller logo for mobile */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 2rem; /* Larger font size for mobile */
+    margin: 1rem 0; /* Add margin between links */
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-toggler {
+    align-self: flex-end; /* Align toggle button to the right */
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+}
+
+/* Section styling */

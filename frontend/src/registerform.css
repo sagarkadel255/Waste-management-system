@@ -1,0 +1,145 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal Container */
+.modal-container {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side form container */
+.form-container {
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Input fields */
+.input-group {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+/* Remember me checkbox */
+.input-group.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.input-group.remember-me input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.input-group.remember-me label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Create account link */
+.create-account {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.create-account a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* Right side image container */
+.modal-image {
+  width: 50%;
+  background-image: url('../public/images/prson.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .modal-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: 250px; /* Adjust height for mobile view */
+    background-position: top;
+  }
+}

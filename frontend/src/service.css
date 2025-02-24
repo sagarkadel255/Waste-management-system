@@ -1,0 +1,135 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  height: 100%;
+}
+
+/* Full Page Container for Service Page */
+.service-page {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #e0f7fa; /* Light green background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading for Services */
+.service-page header h1 {
+  font-size: 2.5rem;
+  color: #2e7d32; /* Dark green for contrast */
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #a5d6a7; /* Light green background for header */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Cards Layout */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for the first row */
+  gap: 20px; /* Space between cards */
+  justify-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Adjust the last two cards to be in 2 columns */
+.services .service-card:nth-last-child(-n+2) {
+  grid-column: span 1; /* Ensure the last two cards span 1 column each */
+}
+
+/* Individual Card */
+.service-card {
+  width: 100%;
+  max-width: 350px;
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Card Title */
+.service-card h2 {
+  font-size: 1.5rem;
+  color: #2e7d32; /* Dark green for titles */
+  margin-bottom: 15px;
+}
+
+/* Service Card Description */
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Button Styling */
+.service-card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2e7d32; /* Dark green for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #1b5e20; /* Darker green on hover */
+}
+
+/* Success Message Styling */
+.success-message {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green background for success message */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .service-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+  }
+
+  .service-page header h1 {
+    font-size: 2rem;
+  }
+}

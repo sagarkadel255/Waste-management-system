@@ -1,0 +1,88 @@
+/* Second Section Styles */
+.second-section {
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f87ea; /* Blue background */
+    padding: 5rem 0; /* Remove horizontal padding */
+    color: white; /* White text color */
+  }
+  
+  .stay-connected h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .stay-connected .lead {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .stay-connected p {
+    font-size: 1.2rem;
+  }
+  
+  .service-categories .row {
+    margin-top: 30px;
+  }
+  
+  .service-categories .col-md-4 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .service-categories h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .service-categories p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  
+  .service-categories .btn-outline-primary {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #f6f3f3;
+    border-color: #2196F3;
+  }
+  
+  .service-categories .btn-outline-primary:hover {
+    color: rgb(20, 21, 20);
+    background-color: #f1f5f8;
+    border-color: #2196F3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stay-connected h2 {
+      font-size: 2rem;
+    }
+  
+    .stay-connected .lead {
+      font-size: 1.3rem;
+    }
+  
+    .service-categories .row {
+      flex-direction: column;
+    }
+  
+    .service-categories .col-md-4 {
+      margin-bottom: 20px;
+    }
+  
+    .service-categories h3 {
+      font-size: 1.8rem;
+    }
+  
+    .service-categories p {
+      font-size: 1rem;
+    }
+  
+    .service-categories .btn-outline-primary {
+      font-size: 1rem;
+    }
+  }
